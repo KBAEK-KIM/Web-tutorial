@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 200%;
+    text-align: center;
+    border-bottom: 3px solid gray;
+    margin: 0;
+    padding: 20px;
+}
+ol{
+    border-right: 3px solid gray;
+    width: 280px;
+    margin: 0;
+    padding-left: 30px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+h2, p{
+    text-align: center;
+}
