@@ -4,22 +4,13 @@
         <title>Web-tutorial - Page 1</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <h1><a href="index.html">Web-tutorial</a></h1>
-        <div id="grid"> 
-            <ol>
-                <li><a href="1.html">Web-tutorial - Page 1</a></li>
-            </ol>
-            <div>
-                <h2>Page 1</h2>
-                <div style="text-align:center;">
-                    <input type="button" value="night" onclick="
-                    var target = document.querySelector('body');
-                    if(this.value === 'night'){
+        <script>
+            function nightDayHandler(self){
+                var target = document.querySelector('body');
+                if(self.value === 'night'){
                         target.style.backgroundColor = 'black';
                         target.style.color = 'white';
-                        this.value = 'day';
+                        self.value = 'day';
 
                         var i = 0;
                         var atag = document.querySelectorAll('a');
@@ -30,7 +21,7 @@
                     } else {
                         target.style.backgroundColor = 'white';
                         target.style.color = 'black';
-                        this.value = 'night';
+                        self.value = 'night';
 
                         var i = 0;
                         var atag = document.querySelectorAll('a');
@@ -39,7 +30,20 @@
                             i = i + 1;
                         }
                     }
-                    ">
+            }
+        </script>
+    </head>
+    <body>
+        <h1><a href="index.html">Web-tutorial</a></h1>
+        <div id="grid"> 
+            <ol>
+                <li><a href="1.html">Web-tutorial - Page 1</a></li>
+            </ol>
+            <div>
+                <h2>Page 1</h2>
+                <div style="text-align:center;">
+                    <input type="button" value="night" onclick="nightDayHandler(this);">
+                    <input type="button" value="night" onclick="nightDayHandler(this);">
                 </div>
                 <p>test image</p>
                 <div style="text-align:center;">
